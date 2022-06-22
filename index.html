@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <table id="userTable">
+      <tr>
+        <th>ID</th>
+        <th>Date de creation</th>
+        <th>Etat</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Nom d'utilisateur</th>
+        <th>Matricule</th>
+        <th id="action_header">Action</th>
+      </tr>
+    </table>
+    <div class="btn-card">
+      <button onclick="showAddUser()" class="btn">Ajouter utilisateur</button>
+    </div>
+    <form onsubmit="addUser()" class="form" id="form">
+      <h2>Ajout d'utilisateurs</h2>
+      <div class="col">
+        <div class="row">
+          <span>Nom</span>
+          <input type="text" name="lastName" id="lastName" />
+        </div>
+        <div class="row">
+          <span>Prenom</span>
+          <input type="text" name="firstName" id="firstName" />
+        </div>
+        <div class="row">
+          <span>Etat</span>
+          <input type="text" name="status" id="status" />
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <span>Nom d'utilisateur</span>
+          <input type="text" name="userName" id="userName" />
+        </div>
+        <div class="row">
+          <span>Date de creation</span>
+          <input type="date" name="createdDate" id="createdDate" />
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <span>Matricule</span>
+          <input
+            type="text"
+            name="registrationNumber"
+            id="registrationNumber"
+          />
+        </div>
+      </div>
+      <div class="btn-row">
+        <button type="button" onclick="addUser()">Enregistrer</button>
+      </div>
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>
